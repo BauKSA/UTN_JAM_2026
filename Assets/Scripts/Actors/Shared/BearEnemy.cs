@@ -1,27 +1,31 @@
 using UnityEngine;
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(PositionController))]
+[RequireComponent(typeof(MovementStateController))]
+[RequireComponent(typeof(BoxCollider2D))]
 public class BearEnemy : MonoBehaviour
 {
-    private PositionController _controller;
+    [SerializeField] private MovementStateController _movementStateController;
 
-    [Header("A quien perseguir")]
-    public Transform igluTarget; 
-
-    [Header("Movimiento")]
-    public float speed = 3f;
-    public float acceleration = 5f;
-
-    private void Awake()
+    void Awake()
     {
-        _controller = GetComponent<PositionController>();
+        _movementStateController = GetComponent<MovementStateController>();
     }
 
-    void Update()
+    void OnEnable()
     {
-        if (igluTarget == null) return;
-        Vector2 dir = igluTarget.position - transform.position;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle);
+        // TAREA 2: Movimiento hacia abajo
+        _movementStateController.Active = true;
+        _movementStateController.CanMove = true;
+        _movementStateController.Movement.Down = true;
+        _movementStateController.Movement.Up = false;
+        _movementStateController.Movement.Left = false;
+        _movementStateController.Movement.Right = false;
+    }
 
-        _controller.MoveForward(speed, acceleration);
+    void OnDisable()
+    {
+        // Frenar cuando se desactiva
+        _movementStateController.Movement.Down = false;
     }
 }

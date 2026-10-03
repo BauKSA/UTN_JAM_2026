@@ -46,7 +46,6 @@ public interface IMovementStateController
     IMovementState Movement { get; set; }
 }
 
-[RequireComponent(typeof(MovementSettings))]
 public class MovementStateController : MonoBehaviour, IMovementStateController
 {
     [SerializeField] private bool active = true;
