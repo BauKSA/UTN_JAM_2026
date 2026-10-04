@@ -5,6 +5,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
+    public List<GameObject> Enemies;
+
     [SerializeField]
     private GameObject _Background;
     [SerializeField]

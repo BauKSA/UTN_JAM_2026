@@ -25,6 +25,9 @@ public class EnemyPenguinCollision : MonoBehaviour
         penguinState.Attacking = false;
         penguinState.BeingDamaged = true;
 
+        MovementStateController penguinMovement = collider.gameObject.GetComponent<MovementStateController>();
+        penguinMovement.CanMove = false;
+
         _attackController.AddDamageTarget(collider.gameObject);
 
         _movementStateController.CanMove = false;
@@ -43,5 +46,12 @@ public class EnemyPenguinCollision : MonoBehaviour
             _movementStateController.CanMove = true;
             _stateController.Attacking = false;
         }
+
+        MovementStateController penguinMovement = collider.gameObject.GetComponent<MovementStateController>();
+        penguinMovement.CanMove = true;
+
+        StateController penguinState = collider.gameObject.GetComponent<StateController>();
+        penguinState.Attacking = true;
+        penguinState.BeingDamaged = false;
     }
 }

@@ -5,9 +5,12 @@ using UnityEngine;
 public class DefenderPenguinBeingAlive : MonoBehaviour
 {
     private StateController _stateController;
+    private SpriteRenderer _spriteRenderer;
 
     private readonly float _cadence = 1f;
     private float _timeSinceLastShot = 0f;
+
+    private GameObject _target;
 
     [SerializeField]
     private GameObject _bullet;
@@ -15,10 +18,17 @@ public class DefenderPenguinBeingAlive : MonoBehaviour
     private void Awake()
     {
         _stateController = GetComponent<StateController>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    void Update()
+    private void Update()
     {
+        if (!_target)
+            _target = FindClosestEnemy();
+
+        if (_target)
+            RotateTowards(_target.transform.position);
+
         _timeSinceLastShot += Time.deltaTime;
         if (_timeSinceLastShot >= _cadence)
         {
@@ -27,16 +37,49 @@ public class DefenderPenguinBeingAlive : MonoBehaviour
         }
     }
 
+    private GameObject FindClosestEnemy()
+    {
+        GameObject closest = null;
+        float minSqrDistance = float.MaxValue;
+
+        foreach (GameObject enemy in GameManager.Instance.Enemies)
+        {
+            if (!enemy)
+                continue;
+
+            float sqrDistance = ((Vector2)enemy.transform.position - (Vector2)transform.position).sqrMagnitude;
+            if (sqrDistance < minSqrDistance)
+            {
+                minSqrDistance = sqrDistance;
+                closest = enemy;
+            }
+        }
+
+        return closest;
+    }
+
+    private void RotateTowards(Vector2 targetPosition)
+    {
+        Vector2 direction = targetPosition - (Vector2)transform.position;
+        if (direction.sqrMagnitude < 0.0001f)
+            return;
+
+        transform.up = direction;
+    }
+
     private void Shoot()
     {
         if (!_bullet) return;
-        if (!_stateController.Attacking)
-            return;
+        if (!_stateController.Attacking) return;
 
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        float offset = spriteRenderer.bounds.size.y / 2 + _bullet.GetComponent<SpriteRenderer>().bounds.size.y / 2;
+        float penguinHalfHeight = _spriteRenderer.sprite.bounds.size.y * transform.lossyScale.y / 2f;
 
-        Vector2 position = new (transform.position.x, transform.position.y + offset);
-        Instantiate(_bullet, position, _bullet.transform.rotation);
+        SpriteRenderer bulletRenderer = _bullet.GetComponent<SpriteRenderer>();
+        float bulletHalfLength = bulletRenderer.sprite.bounds.size.x * _bullet.transform.lossyScale.x / 2f;
+
+        float offset = penguinHalfHeight + bulletHalfLength;
+
+        Vector2 position = (Vector2)transform.position + (Vector2)transform.up * offset;
+        Instantiate(_bullet, position, transform.rotation * _bullet.transform.rotation);
     }
 }
