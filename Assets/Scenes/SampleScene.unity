@@ -431,71 +431,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4251937297288893117, guid: bd43bd45402ea0d4880e6a4c7e6aea27, type: 3}
   m_PrefabInstance: {fileID: 2131666254}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1338422503
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3575835243817423004, guid: b010fa3ea6039e44bb1ea9d45fe7cd4d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.146
-      objectReference: {fileID: 0}
-    - target: {fileID: 3575835243817423004, guid: b010fa3ea6039e44bb1ea9d45fe7cd4d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.051
-      objectReference: {fileID: 0}
-    - target: {fileID: 3575835243817423004, guid: b010fa3ea6039e44bb1ea9d45fe7cd4d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3575835243817423004, guid: b010fa3ea6039e44bb1ea9d45fe7cd4d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3575835243817423004, guid: b010fa3ea6039e44bb1ea9d45fe7cd4d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3575835243817423004, guid: b010fa3ea6039e44bb1ea9d45fe7cd4d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3575835243817423004, guid: b010fa3ea6039e44bb1ea9d45fe7cd4d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3575835243817423004, guid: b010fa3ea6039e44bb1ea9d45fe7cd4d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3575835243817423004, guid: b010fa3ea6039e44bb1ea9d45fe7cd4d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3575835243817423004, guid: b010fa3ea6039e44bb1ea9d45fe7cd4d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5244486152794325259, guid: b010fa3ea6039e44bb1ea9d45fe7cd4d, type: 3}
-      propertyPath: m_Name
-      value: DefenderPenguin
-      objectReference: {fileID: 0}
-    - target: {fileID: 8196752803229349613, guid: b010fa3ea6039e44bb1ea9d45fe7cd4d, type: 3}
-      propertyPath: m_Size.y
-      value: 3.8363168
-      objectReference: {fileID: 0}
-    - target: {fileID: 8196752803229349613, guid: b010fa3ea6039e44bb1ea9d45fe7cd4d, type: 3}
-      propertyPath: m_Offset.y
-      value: -1.8214327
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b010fa3ea6039e44bb1ea9d45fe7cd4d, type: 3}
 --- !u!1 &1590291568
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,7 +571,7 @@ MonoBehaviour:
   attacking: 0
   beingDamaged: 0
   repairing: 0
-  hasTarjet: 0
+  hasTarget: 0
   targetInRange: 0
   lowHealth: 0
   dead: 0
@@ -933,7 +868,6 @@ SceneRoots:
   - {fileID: 278423986}
   - {fileID: 8544023674096054054}
   - {fileID: 2131666254}
-  - {fileID: 492273263}
-  - {fileID: 1338422503}
   - {fileID: 1724954596}
   - {fileID: 1590291570}
+  - {fileID: 6580484113218790318}
