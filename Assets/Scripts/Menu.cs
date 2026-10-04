@@ -2,13 +2,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
-   public void jugar()
+   public void Jugar()
     {
         SceneManager.LoadScene("SampleScene");
     }
-    public void salir()
+    public void Salir()
     {
-        Debug.Log("Saliendo...");
         Application.Quit();
     }
 }

@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/Lose.unity
+    path: Assets/Scenes/gameover.unity
     guid: a60841206b3541d419049b9961d63ad4
   - enabled: 1
     path: Assets/Scenes/Menu.unity

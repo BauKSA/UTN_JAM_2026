@@ -13,6 +13,7 @@ public class GameOverButtons : MonoBehaviour
 
     public void Retry()
     {
+        Debug.Log("Clickeamos");
         SceneManager.LoadScene("SampleScene");
     }
 

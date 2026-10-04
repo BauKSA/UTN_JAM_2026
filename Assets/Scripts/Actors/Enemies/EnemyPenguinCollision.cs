@@ -51,10 +51,14 @@ public class EnemyPenguinCollision : MonoBehaviour
         if (collider.gameObject == null) return;
 
         MovementStateController penguinMovement = collider.gameObject.GetComponent<MovementStateController>();
-        penguinMovement.CanMove = true;
+        if(penguinMovement)
+            penguinMovement.CanMove = true;
 
         StateController penguinState = collider.gameObject.GetComponent<StateController>();
-        penguinState.Attacking = true;
-        penguinState.BeingDamaged = false;
+        if (penguinState)
+        {
+            penguinState.Attacking = true;
+            penguinState.BeingDamaged = false;
+        }
     }
 }

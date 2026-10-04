@@ -10,13 +10,15 @@ public class GameManager : MonoBehaviour
     public List<GameObject> Penguins;
 
     [SerializeField]
+    public GameObject Boat;
+    [SerializeField]
     private GameObject _Collector;
     [SerializeField]
     private GameObject _Background;
     [SerializeField]
     private GameObject _DamageScreen;
 
-    private bool _win = false;
+    public bool _win = false;
     public int _boatCubes = 0;
     private readonly int _boatCubesLimit = 10;
 
@@ -33,8 +35,6 @@ public class GameManager : MonoBehaviour
         }
 
         Instance = this;
-
-        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
 
         if(_Collector == null && !_win)
         {
+            Debug.Log("game over");
             SceneManager.LoadScene("gameover");
         }
 

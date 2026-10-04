@@ -28,6 +28,8 @@ public class CollectorPenguinCollision : MonoBehaviour
         if (Time.time - _lastFlipTime < 0.2f) return;
         _lastFlipTime = Time.time;
 
+        if (GameManager.Instance._win) return;
+
         _movementState.Movement.Left = !_movementState.Movement.Left;
         _movementState.Movement.Right = !_movementState.Movement.Right;
 
@@ -36,7 +38,7 @@ public class CollectorPenguinCollision : MonoBehaviour
 
         if (_hasIceCube)
         {
-            _movementSettings.Speed = new(0.25f, _movementSettings.Speed.y);
+            _movementSettings.Speed = new(1f, _movementSettings.Speed.y);
 
             Vector2 iceCubePosition = new(transform.position.x - 0.45f, transform.position.y);
 
@@ -45,7 +47,8 @@ public class CollectorPenguinCollision : MonoBehaviour
         }
         else
         {
-            _movementSettings.Speed = new(0.5f, _movementSettings.Speed.y);
+            GameManager.Instance._boatCubes++;
+            _movementSettings.Speed = new(1f, _movementSettings.Speed.y);
             Destroy(_iceCube);
         }
     }
