@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -6389160574164819026}
   - component: {fileID: -225979912618701528}
   - component: {fileID: 7524394170422069354}
+  - component: {fileID: 1743230466999076699}
   m_Layer: 0
   m_Name: DefenderPenguin
   m_TagString: Penguin
@@ -165,3 +166,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.25, y: 0.1}
   m_EdgeRadius: 0
+--- !u!114 &1743230466999076699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5244486152794325259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d779e41169d2b4382ec19bb1c88f50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StateController
+  Attacking: 1
+  BeingDamaged: 0

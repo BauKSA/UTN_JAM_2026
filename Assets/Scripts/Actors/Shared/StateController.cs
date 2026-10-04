@@ -3,12 +3,10 @@ using UnityEngine;
 public class StateController : MonoBehaviour
 {
     [Header("Accion")]
-    public bool idle = true;
-    public bool moving;
-    public bool attacking;
-    public bool beingDamaged;
-    public bool repairing;
+    public bool Attacking;
+    public bool BeingDamaged;
 
+    /*
     [Header("Objetivo")]
     public bool hasTarget;
     public bool targetInRange;
@@ -16,4 +14,5 @@ public class StateController : MonoBehaviour
     [Header("Vida")]
     public bool lowHealth;
     public bool dead;
+    */
 }

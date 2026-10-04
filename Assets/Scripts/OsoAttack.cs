@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class OsoAttack : MonoBehaviour
 {
+    /*
     public float danio = 10f;
     public float tiempoEntreAtaques = 1f;
 
@@ -28,4 +29,5 @@ public class OsoAttack : MonoBehaviour
 
         proximoAtaque = Time.time + tiempoEntreAtaques;
     }
+    */
 }

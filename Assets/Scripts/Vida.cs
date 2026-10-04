@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Vida : MonoBehaviour
 {
+    /*
     public float vidaMaxima = 100f;
     public float vidaActual;
 
@@ -36,4 +37,5 @@ public class Vida : MonoBehaviour
     {
         state.beingDamaged = false;
     }
+    */
 }

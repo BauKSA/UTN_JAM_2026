@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class OsoIA : MonoBehaviour
 {
+    /*
     public Transform objetivo;
     public float velocidad = 2f;
     public float rangoAtaque = 1f;
@@ -56,4 +57,5 @@ public class OsoIA : MonoBehaviour
                 transform.position, objetivo.position, velocidad * Time.deltaTime);
         }
     }
+    */
 }
