@@ -1,16 +1,24 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
     public List<GameObject> Enemies;
+    public List<GameObject> Penguins;
 
+    [SerializeField]
+    private GameObject _Collector;
     [SerializeField]
     private GameObject _Background;
     [SerializeField]
     private GameObject _DamageScreen;
+
+    private bool _win = false;
+    public int _boatCubes = 0;
+    private readonly int _boatCubesLimit = 10;
 
     private readonly float _damageTimeRate = 0.25f;
     private float _currentTime = 0f;
@@ -29,13 +37,18 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    private void Start()
+    {
+        Penguins.Add(_Collector);
+    }
+
     private void Update()
     {
         if (!_damageActive)
             return;
 
         _currentTime += Time.deltaTime;
-        if(_currentTime >= _damageTimeRate)
+        if (_currentTime >= _damageTimeRate)
         {
             _currentTime = 0;
             _damageActive = false;
@@ -45,6 +58,16 @@ public class GameManager : MonoBehaviour
 
             SpriteRenderer damageScreenSR = _DamageScreen.GetComponent<SpriteRenderer>();
             damageScreenSR.enabled = false;
+        }
+
+        if(_Collector == null && !_win)
+        {
+            SceneManager.LoadScene("gameover");
+        }
+
+        if (_boatCubes == _boatCubesLimit)
+        {
+            _win = true;
         }
     }
 
