@@ -1,10 +1,11 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class CollectorPenguinMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 1f;
     [SerializeField] private bool startLeft = true;
     [SerializeField] private MovementStateController movementState;
+    
 
     private void Awake()
     {
@@ -22,6 +23,14 @@ public class CollectorPenguinMovement : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+
+            SceneManager.LoadScene("1");
+            Debug.Log("Apretaste L");
+            
+        }
+        
         if (!movementState.Active || !movementState.CanMove) return;
 
         if (movementState.Movement.Left)
