@@ -12,7 +12,10 @@ GameObject:
   - component: {fileID: 3313507549289873289}
   - component: {fileID: 89755701499272193}
   - component: {fileID: 3633272446248868089}
-  - component: {fileID: 5524416703923238968}
+  - component: {fileID: -3259968298678689487}
+  - component: {fileID: 4451729940287963938}
+  - component: {fileID: -7949128241264718484}
+  - component: {fileID: 1634915076471570625}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -28,13 +31,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7475103749813666296}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.011804007, y: -0.011905922, z: 0.7100398, w: 0.703962}
-  m_LocalPosition: {x: -1.1542, y: -0.095, z: 9.95857e-13}
-  m_LocalScale: {x: 0.16672067, y: 0.13495642, z: 1}
+  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 1.921, y: 0, z: 90.493}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
 --- !u!212 &3313507549289873289
 SpriteRenderer:
   serializedVersion: 2
@@ -82,7 +85,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7157561037332017152, guid: 0370d446ed536264a92143dbadcd1ee4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -155,7 +158,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.012995958, y: -0.0072064176}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -165,9 +168,9 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.3168762, y: 0.22709449}
+  m_Size: {x: 0.75, y: 0.25}
   m_EdgeRadius: 0
---- !u!114 &5524416703923238968
+--- !u!114 &-3259968298678689487
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,6 +179,55 @@ MonoBehaviour:
   m_GameObject: {fileID: 7475103749813666296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3bd20349dea3e04286e3eb45d50d792, type: 3}
+  m_Script: {fileID: 11500000, guid: b18d3ee04bcb86a41a930f2105b88044, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::MovementSettings
+  speed: {x: 75, y: 75}
+  acceleration: 45
+  deceleration: 25
+  instantAcceleration: 1
+--- !u!114 &4451729940287963938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7475103749813666296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb405de1e9aeb2f4f9d2569f5f519b62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovementStateController
+  active: 1
+  canMove: 1
+  movement:
+    right: 0
+    left: 0
+    up: 0
+    down: 0
+    forward: 0
+    back: 0
+--- !u!114 &-7949128241264718484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7475103749813666296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d3f278905ca9e439ece159156685a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PositionController
+--- !u!114 &1634915076471570625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7475103749813666296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c966c7f0cd42e984e946dd20ba08a407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BulletBeingAlive

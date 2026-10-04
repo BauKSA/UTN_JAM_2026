@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: aa8fd5e10aba39343bcd63461dc9d708
+guid: 8077676cd688a7b489a92bc7f23f2bb4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3113396487120128945
-    second: pinguino_guerrero_png_2_0
+      213: -5740818377071519318
+    second: oso_polar_zombie_soldado2_0
   - first:
-      213: -8965502914896241612
-    second: pinguino_guerrero_png_2_1
-  - first:
-      213: -2668186090490357076
-    second: pinguino_guerrero_png_2_2
+      213: -707479083686860207
+    second: oso_polar_zombie_soldado2_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -52,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -90,6 +87,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -104,19 +114,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -158,13 +155,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pinguino_guerrero_png_2_0
+      name: oso_polar_zombie_soldado2_0
       rect:
         serializedVersion: 2
-        x: 70
-        y: 49
-        width: 8
-        height: 7
+        x: 182
+        y: 561
+        width: 16
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +170,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f447144f36efac4d0800000000000000
-      internalID: -3113396487120128945
+      spriteID: aa91e9a2a148450b0800000000000000
+      internalID: -5740818377071519318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pinguino_guerrero_png_2_1
+      name: oso_polar_zombie_soldado2_1
       rect:
         serializedVersion: 2
-        x: 76
-        y: 3
-        width: 50
-        height: 92
+        x: 184
+        y: 328
+        width: 174
+        height: 329
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,30 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 43c51e4a992249380800000000000000
-      internalID: -8965502914896241612
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pinguino_guerrero_png_2_2
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 36
-        width: 11
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: caa1fa923e2b8fad0800000000000000
-      internalID: -2668186090490357076
+      spriteID: 15a63d295878e26f0800000000000000
+      internalID: -707479083686860207
       vertices: []
       indices: 
       edges: []
@@ -227,7 +202,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -237,9 +212,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pinguino_guerrero_png_2_0: -3113396487120128945
-      pinguino_guerrero_png_2_1: -8965502914896241612
-      pinguino_guerrero_png_2_2: -2668186090490357076
+      oso_polar_zombie_soldado2_0: -5740818377071519318
+      oso_polar_zombie_soldado2_1: -707479083686860207
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
