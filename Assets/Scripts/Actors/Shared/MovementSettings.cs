@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
-[CreateAssetMenu(fileName = "MovementSettings", menuName = "Settings/MovementSettings")]
-public class MovementSettings : ScriptableObject
+
+public class MovementSettings : MonoBehaviour
 {
     [SerializeField] private Vector2 speed = new Vector2(75f, 75f);
     [SerializeField] private float acceleration = 45f;
