@@ -11,6 +11,8 @@ TagManager:
   - Bullet
   - IceCube
   - PenguinBulletVoid
+  - penguincollector
+  - CollectorPenguinLimit
   layers:
   - Default
   - TransparentFX
