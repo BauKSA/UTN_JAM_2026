@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Enemy
   - Penguin
+  - Igloo
+  - igloo_block
+  - penguincollector
+  - CollectorPenguinLimit
   layers:
   - Default
   - TransparentFX
