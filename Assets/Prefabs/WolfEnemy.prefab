@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: -3974693977814400328}
   m_Layer: 0
   m_Name: WolfEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,7 +39,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.075, y: -0.02, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -160,7 +160,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.6, y: 0.6}
+  m_Size: {x: 0.36, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &2674673155913819104
 SpriteRenderer:
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18d3ee04bcb86a41a930f2105b88044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovementSettings
-  speed: {x: 75, y: 1.25}
+  speed: {x: 75, y: 1.75}
   acceleration: 45
   deceleration: 25
   instantAcceleration: 1
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4986a262c58123439a5cc3b2bbc7e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthController
-  _health: 1
+  _health: 2
   _damageRate: 1
 --- !u!114 &-6448689074815938673
 MonoBehaviour:

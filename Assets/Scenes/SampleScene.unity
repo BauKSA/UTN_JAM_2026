@@ -520,6 +520,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CollectorPenguin
       objectReference: {fileID: 0}
+    - target: {fileID: 6958000437960692524, guid: 31209923aef048b409c182aa5640077a, type: 3}
+      propertyPath: _iceCubePrefab
+      value: 
+      objectReference: {fileID: 2065111673298722741, guid: b4a99a1e392121649bbda128f6ea6d56, type: 3}
     m_RemovedComponents:
     - {fileID: 0}
     m_RemovedGameObjects: []
@@ -1204,6 +1208,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7421173812379449943, guid: 7ab9f0523213e924698ec01d44a7d0e5, type: 3}
+      propertyPath: _Collector
+      value: 
+      objectReference: {fileID: 714517417}
     - target: {fileID: -7421173812379449943, guid: 7ab9f0523213e924698ec01d44a7d0e5, type: 3}
       propertyPath: _Background
       value: 
