@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(MovementStateController))]
 [RequireComponent(typeof(StateController))]
 [RequireComponent(typeof(EnemyAttackController))]
-public class EnemyPenguinCollision : MonoBehaviour
+public class EnemyIceCubeCollision : MonoBehaviour
 {
     private MovementStateController _movementStateController;
     private StateController _stateController;
@@ -18,12 +18,10 @@ public class EnemyPenguinCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (!collider.gameObject.CompareTag("Penguin"))
+        if (!collider.gameObject.CompareTag("IceCube"))
             return;
 
-        StateController penguinState = collider.gameObject.GetComponent<StateController>();
-        penguinState.Attacking = false;
-        penguinState.BeingDamaged = true;
+        collider.gameObject.GetComponent<StateController>().BeingDamaged = true;
 
         _attackController.AddDamageTarget(collider.gameObject);
 
@@ -33,11 +31,12 @@ public class EnemyPenguinCollision : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collider)
     {
-        if (!collider.gameObject.CompareTag("Penguin"))
+        if (!collider.gameObject.CompareTag("IceCube"))
             return;
 
         _attackController.RemoveDamageTarget(collider.gameObject);
 
+        // Solo se libera al oso si ya no queda ningún cubo en contacto
         if (!_attackController.HasTargets)
         {
             _movementStateController.CanMove = true;

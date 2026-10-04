@@ -19,6 +19,9 @@ GameObject:
   - component: {fileID: 6609097020554553304}
   - component: {fileID: 1937656754996232924}
   - component: {fileID: 2800134404712439671}
+  - component: {fileID: 5639154800834888515}
+  - component: {fileID: -6448689074815938673}
+  - component: {fileID: -3974693977814400328}
   m_Layer: 0
   m_Name: BearEnemy
   m_TagString: Untagged
@@ -272,3 +275,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f27f877be2fec9a43b6a761a934d3804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttackController
+--- !u!114 &5639154800834888515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883787483124342123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4986a262c58123439a5cc3b2bbc7e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthController
+  _health: 3
+  _damageRate: 1
+--- !u!114 &-6448689074815938673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883787483124342123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03aeff82d1bede5468e543e207068c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyBulletCollision
+--- !u!114 &-3974693977814400328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883787483124342123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e59eeaf1dbd4c4587d63befbda2eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyIceCubeCollision

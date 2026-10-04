@@ -4,7 +4,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    public List<GameObject> DamagedObjects;
 
     [SerializeField]
     private GameObject _Background;
@@ -39,14 +38,6 @@ public class GameManager : MonoBehaviour
             _currentTime = 0;
             _damageActive = false;
 
-            DamagedObjects.RemoveAll(damaged => damaged == null);
-            foreach (GameObject damaged in DamagedObjects)
-            {
-                SpriteRenderer damagedSR = damaged.GetComponent<SpriteRenderer>();
-                damagedSR.color = Color.white;
-            }
-
-
             SpriteRenderer backgroundSR = _Background.GetComponent<SpriteRenderer>();
             backgroundSR.color = Color.white;
 
@@ -59,13 +50,6 @@ public class GameManager : MonoBehaviour
     {
         _damageActive = true;
         _currentTime = 0;
-
-        DamagedObjects.RemoveAll(damaged => damaged == null);
-        foreach (GameObject damaged in DamagedObjects)
-        {
-            SpriteRenderer damagedSR = damaged.GetComponent<SpriteRenderer>();
-            damagedSR.color = Color.red;
-        }
 
         SpriteRenderer backgroundSR = _Background.GetComponent<SpriteRenderer>();
         backgroundSR.color = Color.red;

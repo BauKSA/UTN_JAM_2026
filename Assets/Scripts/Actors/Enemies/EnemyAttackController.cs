@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(StateController))]
@@ -7,7 +8,9 @@ public class EnemyAttackController : MonoBehaviour
     private float _currentTime = 2f;
 
     private StateController _stateController;
-    private GameObject _damageTarget = null;
+    private readonly List<GameObject> _damageTargets = new List<GameObject>();
+
+    public bool HasTargets => _damageTargets.Count > 0;
 
     private void Awake()
     {
@@ -24,11 +27,30 @@ public class EnemyAttackController : MonoBehaviour
         {
             _currentTime -= _attackTimeRate;
             GameManager.Instance.Damage();
+
+            for (int i = _damageTargets.Count - 1; i >= 0; i--)
+            {
+                GameObject target = _damageTargets[i];
+
+                if (!target)
+                {
+                    _damageTargets.RemoveAt(i);
+                    continue;
+                }
+
+                target.GetComponent<HealthController>().GetDamage();
+            }
         }
     }
 
-    public void SetDamageTarget(GameObject target)
+    public void AddDamageTarget(GameObject target)
     {
-        _damageTarget = target;
+        if (!_damageTargets.Contains(target))
+            _damageTargets.Add(target);
+    }
+
+    public void RemoveDamageTarget(GameObject target)
+    {
+        _damageTargets.Remove(target);
     }
 }

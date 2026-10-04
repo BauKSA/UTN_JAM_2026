@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -225979912618701528}
   - component: {fileID: 7524394170422069354}
   - component: {fileID: 1743230466999076699}
+  - component: {fileID: -9084873147447058872}
   m_Layer: 0
   m_Name: DefenderPenguin
   m_TagString: Penguin
@@ -180,3 +181,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StateController
   Attacking: 1
   BeingDamaged: 0
+--- !u!114 &-9084873147447058872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5244486152794325259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4986a262c58123439a5cc3b2bbc7e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthManager
+  _health: 3
+  _damageRate: 1

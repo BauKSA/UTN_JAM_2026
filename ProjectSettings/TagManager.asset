@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Enemy
   - Penguin
+  - Igloo
+  - igloo_block
+  - Bullet
+  - IceCube
+  - PenguinBulletVoid
   layers:
   - Default
   - TransparentFX
